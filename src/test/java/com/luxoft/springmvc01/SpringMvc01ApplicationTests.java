@@ -1,5 +1,6 @@
 package com.luxoft.springmvc01;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,5 +19,6 @@ class SpringMvc01ApplicationTests {
 	@Test
 	public void exampleTest() {
 		String body = this.restTemplate.getForObject("/", String.class);
+		Assert.assertTrue(body.contains("Hello World"));
 	}
 }
